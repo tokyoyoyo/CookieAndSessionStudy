@@ -5,6 +5,41 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0"
          metadata-complete="true">
+
+
+
+    <servlet>
+        <servlet-name>session01</servlet-name>
+        <servlet-class>com.jie.servlet.SessionDemo01</servlet-class>
+    </servlet>
+    <!--            请求路径-->
+    <servlet-mapping>
+        <servlet-name>session01</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>session02</servlet-name>
+        <servlet-class>com.jie.servlet.SessionDemo02</servlet-class>
+    </servlet>
+    <!--            请求路径-->
+    <servlet-mapping>
+        <servlet-name>session02</servlet-name>
+        <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>session03</servlet-name>
+        <servlet-class>com.jie.servlet.SessionDemo03</servlet-class>
+    </servlet>
+    <!--            请求路径-->
+    <servlet-mapping>
+        <servlet-name>session03</servlet-name>
+        <url-pattern>/s3</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>cookie</servlet-name>
         <servlet-class>com.jie.servlet.CookieDemo01</servlet-class>
@@ -35,4 +70,9 @@
         <url-pattern>/c3</url-pattern>
     </servlet-mapping>
 
+<!--    session默认失效时间-->
+    <session-config>
+<!--        分钟-->
+        <session-timeout>1</session-timeout>
+    </session-config>
 </web-app>
